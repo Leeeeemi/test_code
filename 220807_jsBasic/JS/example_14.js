@@ -199,30 +199,35 @@ function doCalcAgeValue() {
   var age = document.getElementById("calcAgeData").value;
   var result;
 
-  // true나 false위치에 중첩해서 구현 가능하지만 가독성 재기
+  if (!isNaturalNum(age))
+    reuturn;
+
+  // true나 false위치에 중첩해서 구현 가능하지만 가독성 떨어짐
+  // 이렇게 구현할 수도 있다는 의미로 써둠 
   result = age < 10 ? "10대 이하" : (age < 20 ? "10대" : (age < 30 ? "20대" : (age < 40 ? "30대" : "40대 이상")));
 
   alert("해당 연령은 " + result + "입니다.");
 }
 
+// 반복문에서 사용될 건너뛸 층수를 전역변수로 선언 
+const SKIP_FLOOR = 4;
+
 function doDrawFloor() {
   var drawCnt = document.getElementById("doDrawCnt").value;
   var result;
 
-  // type이 number이므로 숫자가 아니면 공백으로 넘어옴 
-  if (drawCnt == "") {
-    alert("ERROR! 정확한 값을 입력하세요.");
-    return;
-  }
+  if (!isNaturalNum(drawCnt))
+    reuturn;
 
   result = "";
 
   for (var i = drawCnt; i > 0 ; i--) {
-    if (i == 4) {
+    if (i == SKIP_FLOOR) {
       // for문이기 때문에 굳이 i--를 안해줘도 됨. for문에 마지막에서 감소하는데, continue는 for문의 마지막으로 이동하기 때문 
       continue;
     }
-    i > 1 ? ( i == drawCnt ? result = i + "F " : result += "\n" + i + "F ") : result += "\n" + i + "F ";
+    // 처음에만 줄바꿈없이 층수를 출력, 4층을 입력 시 불필요한 첫번째 줄바꿈 제거
+    i == drawCnt ? result = i + "F " : (drawCnt == SKIP_FLOOR && i == drawCnt - 1 ? result += i + "F " : result += "\n" + i + "F ");
     
     for (var j = 0; j <= drawCnt - i ; j++) {
       result += "■";
@@ -236,29 +241,20 @@ function doDrawFloor2() {
   var drawCnt = document.getElementById("doDrawCnt2").value;
   var result;
 
-  // type이 number이므로 숫자가 아니면 공백으로 넘어옴 
-  if (drawCnt == "") {
-    alert("ERROR! 정확한 값을 입력하세요.");
-    return;
-  }
+  if (!isNaturalNum(drawCnt))
+    reuturn;
 
   var i = drawCnt;
 
   result = "";
 
   while (i > 0) {
-    if (i > 1) {
-      if (i == 4) {
-        i--;
-        continue;
-      }
-      if (i == drawCnt) {
-        result += i + "F ";
-      } else {
-        result += "\n" + i + "F "
-      }
+    if (i == SKIP_FLOOR) {
+      // 감소 후 continue를 써야함. 아니면 무한 루프에 빠짐 
+      i--;
+      continue;
     } else {
-      result += "\n" + i + "F "
+      result += i + "F "
     }
 
     j = 0;
@@ -267,6 +263,7 @@ function doDrawFloor2() {
       j++;
     }
     
+    result += "\n";
     i--;
   }
 
@@ -277,18 +274,14 @@ function doDrawFloor3() {
   var drawCnt = document.getElementById("doDrawCnt3").value;
   var result;
 
-  // type이 number이므로 숫자가 아니면 공백으로 넘어옴 
-  if (drawCnt == "") {
-    alert("ERROR! 정확한 값을 입력하세요.");
-    return;
-  }
+  if (!isNaturalNum(drawCnt))
+    reuturn;
 
   var i = 0;
-
   result = "";
 
   do {
-    if (drawCnt - i == 4) {
+    if (drawCnt - i == SKIP_FLOOR) {
       i++;
       continue;
     }
@@ -303,9 +296,31 @@ function doDrawFloor3() {
       }
     } while(true);
     
-    i++;
     result += "\n"
+    i++;
   }  while (i < drawCnt)
 
   alert (result);
+}
+
+// 반복되는 자연수 체크로직을 함수로 분리 
+function isNaturalNum(aNum) {
+
+  // type이 number이므로 숫자가 아니면 공백으로 넘어옴 
+  if (aNum == "") {
+    alert("ERROR! 정확한 값을 입력하세요.");
+    return false;
+  
+  // 음수 또는 0 입력 시 오류
+  } else if (aNum <= 0) {
+    alert("ERROR! 1이상의 값을 입력하세요.");
+    return false;
+
+  // 정수는 1로 나눴을 때 나머지가 0인 것을 이용하여 정수 판별
+  } else if (aNum % 1 != 0) {
+    alert("ERROR! 정수를 입력하세요.");
+    return false;
+  } else {
+    return true;
+  }
 }
