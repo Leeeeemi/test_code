@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+    
+<head>
+  <meta charset="UTF-8">
+  <title>14장 예제</title>
+  <link rel="stylesheet" href="../CSS/example_14.css">
+  <script src="../JS/example_14.js" defer></script>
+</head>
+
+
+<body>
+  <div class="mainContainer">
+    <div class="mainContent" onclick="doClickVarChk()">
+      변수(CLICK!)
+    </div>
+    <div class="mainContent">
+      자료형
+      <div class="selContainer">
+        <select id="typeSelBox">
+          <option value = 100    >100    </option>
+          <option value = "'100'">'100'  </option>
+          <option value = 4.13   >4.13   </option>
+          <option value = 017    >017    </option>
+          <option value = 0xFF3  >0xFF3  </option>
+          <option value = TEST   >TEST   </option>
+          <option value = 1==1   >1==1   </option>
+          <option value = 1==2   >1==2   </option>        
+          <option value = null   >null   </option>        
+          <option value = a      >a      </option>     
+          <option value = [1,2,3]>[1,2,3]</option>   
+        </select>
+        <button type="button" onclick="doSelTypeValue()">선택</button>
+      </div>
+    </div>
+    <div class="mainContent">
+      산술연산자 
+      <div class="selContainer">
+        <input type="number" id="calcData1" class="smallBox"></input>
+        <select id="calcSelBox" onchange="doChangeCalcSelBox()">
+          <option value = "+" >+ </option>
+          <option value = "-" >- </option>
+          <option value = "*" >* </option>
+          <option value = "/" >/ </option>
+          <option value = "%" >% </option>
+          <option value = "++">++</option>
+          <option value = "--">--</option> 
+        </select>
+        <input type="number" id="calcData2" class="smallBox"></input>
+        <button type="button" onclick="doSelCalcValue()">=</button>
+        <input type="number" id="calcResult" class="smallBox" readonly></input>
+      </div>
+    </div>
+    <div class="mainContent">
+      할당연산자 
+      <div class="selContainer">
+        <input type="number" id="assignData1" class="smallBox"></input>
+        <select id="assignSelBox">
+          <option value = "+=" >+=</option>
+          <option value = "-=" >-=</option>
+          <option value = "*=" >*=</option>
+          <option value = "/=" >/=</option>
+          <option value = "%=" >%=</option>
+        </select>
+        <input type="number" id="assignData2" class="smallBox"></input>
+        <button type="button" onclick="doSelAssignValue()">=</button>
+        <input type="number" id="assignResult" class="smallBox" readonly></input>
+      </div>
+    </div>
+    <div class="mainContent">
+      비교연산자 
+      <div class="selContainer">
+        <input id="compareData1" class="smallBox"></input>
+        <select id="compareSelBox">
+          <option value = "==" >== </option>
+          <option value = "===">===</option>
+          <option value = "!=" >!= </option>
+          <option value = "!==">!==</option>
+          <option value = "<"  ><  </option>
+          <option value = "<=" ><= </option>
+          <option value = ">"  >>  </option>
+          <option value = ">=" >>= </option>
+        </select>
+        <input id="compareData2" class="smallBox"></input>
+        <button type="button" onclick="doSelCompareValue()">=</button>
+        <input id="compareResult" class="smallBox" readonly></input>
+      </div>
+    </div>
+    <div class="mainContent">
+      조건연산자 <br>
+      나이를 입력하세요. 
+      <input id="calcAgeData" class="smallBox"></input>
+      <button type="button" onclick="doCalcAgeValue()">?</button>
+    </div>
+    <div class="mainContent">
+      반복문(for문) <br>
+      몇 칸을 쌓으시겠습니까? 
+      <input type="number" id="doDrawCnt" class="smallBox"></input>
+      <button type="button" onclick="doDrawFloor()">?</button>
+    </div>
+    <div class="mainContent">
+      반복문(while문) <br>
+      몇 칸을 쌓으시겠습니까? 
+      <input type="number" id="doDrawCnt2" class="smallBox"></input>
+      <button type="button" onclick="doDrawFloor2()">?</button>
+    </div>
+    <div class="mainContent">
+      반복문(do-while문) <br>
+      몇 칸을 쌓으시겠습니까? 
+      <input type="number" id="doDrawCnt3" class="smallBox"></input>
+      <button type="button" onclick="doDrawFloor3()">?</button>
+    </div>
+  </div>
+</body>
