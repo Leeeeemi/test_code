@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+    
+<head>
+  <meta charset="UTF-8">
+  <title>14장 예제</title>
+  <link rel="stylesheet" href="../CSS/220816_VendingMachine.css">
+  <script src="../JS/220816_VendingMachine.js" defer></script>
+</head>
+
+
+<body>
+  <div class="vendingContainer">
+    <div class="vendingContent">
+      <div class="goodsContainer">
+        <div class="goodsContent goodsFirstLine"></div>    <!-- coke & pepsi -->
+        <div class="goodsBtnContainer">
+          <div class="goodsPrevGab"></div>
+          <div class="goodsBtnContent cokeBtn">
+            <img class="cokeAble" src="/resource/activeBtn.png">
+          </div>
+          <div class="goodsBtnGab"></div>
+          <div class="goodsBtnContent pepsiBtn">
+            <img class="pepsiAble"  src="/resource/activeBtn.png">
+          </div>
+        </div>
+        <div class="goodsContent goodsSecondLine"></div>    <!-- lemon & grapefruit -->
+        <div class="goodsBtnContainer">
+          <div class="goodsPrevGab"></div>
+          <div class="goodsBtnContent lemonBtn">
+            <img class="lemonAble"  src="/resource/activeBtn.png">
+          </div>
+          <div class="goodsBtnGab"></div>
+          <div class="goodsBtnContent grapefruitBtn">
+            <img class="grapefruitAble"  src="/resource/activeBtn.png">
+          </div>
+        </div>
+      </div>
+      <div class="userBtnContainer">
+        <div class="userGab1"></div>
+        <div class="displayContainer">
+          <div class="displayGab1"></div>
+          <div class="display">
+            <img class="displayText" src="/resource/sale.png">
+            <label class="displayAmount"></label>
+          </div>
+        </div>
+        <div class="returnBtnContainer">
+          <div class="returnBtn"></div>
+        </div>
+        <div class="amountBtnContainer">
+          <div class="amountGab1"></div>
+          <div class="amountPaperBtn"></div>
+          <div class="amountGab2"></div>
+          <div class="amountCoinBtn"></div>
+        </div>
+        <div class="userGab2"></div>
+      </div>
+      <div class="returnBoxContainer">
+        <div class="returnCoinContainer">
+          <div class="CoinGab1"></div>
+          <div class="CoinBox"></div>
+        </div>
+        <div class="userGab3"></div>
+        <div class="goodsBoxContainer"></div>
+      </div>
+    </div>
+    <div class="userCash">
+      <label class="displayCash">잔액 : <label class="cashAmount"></label></label>
+    </div>
+  </div>
+
+  <div class="moneyBgContainer"></div>
+  <div class="moneyContainer">
+    <div class="moneyHeader">
+      <div class="moneyCount">
+        선택한 금액 : <label class="ChooseMoney"></label>
+      </div>
+      <div class="moneyBtnContent">
+        <img class="okBtn" src="/resource/okbtn.png">
+        <img class="cancleBtn" src="/resource/canclebtn.png">
+      </div>
+    </div>
+    <div class="paperContainer">
+      <div class="paperContent manWonContainer">
+        <img class="man1Won" src="/resource/manwon.png">
+        <img class="man2Won" src="/resource/manwon.png">
+        <img class="man3Won" src="/resource/manwon.png">
+      </div>
+      <div class="paperContent ohcheonWonContainer">
+        <img class="ohcheonWon" src="/resource/ohcheonwon.png">
+      </div>
+      <div class="paperContent cheonWonContainer">
+        <img class="cheon1Won" src="/resource/cheonwon.png">
+        <img class="cheon2Won" src="/resource/cheonwon.png">
+        <img class="cheon3Won" src="/resource/cheonwon.png">
+        <img class="cheon4Won" src="/resource/cheonwon.png">
+      </div>
+    </div>
+    <div class="coinContainer">
+      <div class="coinContent ohbackWonContainer">
+        <img class="ohbackWon" src="/resource/ohbackwon.png">
+      </div>
+      <div class="coinContent backWonContainer">
+        <img class="back1Won" src="/resource/backwon.png">
+        <img class="back2Won" src="/resource/backwon.png">
+        <img class="back3Won" src="/resource/backwon.png">
+        <img class="back4Won" src="/resource/backwon.png">
+      </div>
+    </div>
+  </div>
+
+</body>
