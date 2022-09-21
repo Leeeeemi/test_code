@@ -1,0 +1,318 @@
+
+.vendingContainer {
+  width : 35rem;
+  height : 54rem;
+  margin : auto;
+  padding-left: 0.4rem;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  background: url( "../resource/machine.png" ) center no-repeat;
+  background-size : contain;
+}
+
+.vendingContent {
+  height : 54rem;
+  border : 2.9rem #ffffff00 solid;
+  box-sizing: border-box;
+}
+
+.goodsContainer {
+  height : 23.3rem;
+  width : 100%;
+}
+
+.goodsFirstLine {
+  height : 7.5rem;
+}
+
+.goodsBtnContainer {
+  height : 2.4rem;
+  display : flex;
+  justify-content: start;
+}
+
+.goodsSecondLine {
+  height : 11rem;
+}
+
+.goodsPrevGab {
+  width : 5.2rem;
+}
+
+.goodsBtnContent {
+  width : 4.1rem;
+  height : 100%;
+  display : flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.goodsBtnContent > img {
+  height : 2rem;
+  padding-left: 0.1rem;
+  padding-top: 0.3rem;
+  display : none;
+}
+
+.goodsBtnGab {
+  width : 10.5rem;
+  height : 100%;
+}
+
+.userBtnContainer {
+  /* height : 11.5rem; */
+  width : 100%;
+}
+
+.userGab1 {
+  height : 2rem;
+  width : 100%;
+}
+
+.displayContainer {
+  width : 100%;
+  height : 3.4rem;
+  display : flex;
+  justify-content: left;
+}
+
+.displayGab1 {
+  width : 17.6rem;
+  /* width : 19rem; */
+  height : 100%;
+}
+
+.display {
+  width : 6.6rem;
+  height : 100%;
+  text-align: right;
+}
+
+.displayAmount {
+  width : 6.6rem;
+  height : 100%;
+  padding-right: 0.8rem;
+  font-size: 1.5rem;
+  line-height: 3.4rem;
+  color : red;
+  display : none;
+}
+
+.display > img {
+  width : 100%;
+  height : 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.returnBtnContainer {
+  height : 1.6rem;
+  display : flex;
+  justify-content: right;
+}
+
+.returnBtn {
+  width : 2rem;
+  height : 100%;
+}
+
+.amountBtnContainer {
+  width : 100%;
+  height : 2.5rem;
+  display : flex;
+  justify-content: left;
+}
+
+.amountGab1 {
+  width : 17.6rem;
+  height : 100%;
+}
+
+.amountPaperBtn {
+  width : 6.3rem;
+  height : 100%;
+}
+
+.amountGab2 {
+  width : 0.7rem;
+  height : 100%;
+}
+
+.amountCoinBtn {
+  width : 3rem;
+  height : 100%;
+}
+
+.userGab2 {
+  width : 100%;
+  height : 2.7rem;
+}
+
+.returnBoxContainer {
+  height : 12.5rem;
+  width : 100%;
+}
+
+.returnCoinContainer {
+  width : 100%;
+  height : 2.5rem;
+  display : flex;
+  justify-content: left;
+}
+
+.CoinGab1 {
+  width : 24.35rem;
+  height : 100%;
+}
+
+.CoinBox {
+  width : 3.4rem;
+  height : 100%;
+}
+
+.userGab3 {
+  width : 100%;
+  height : 2.9rem;
+}
+
+.goodsBoxContainer {
+  width : 100%;
+  height : 7.2rem;
+}
+
+.userCash {
+  width : 100%;
+  height : 2rem;
+  display : flex;
+}
+
+.displayCash  {
+  width : 100%;
+  height : 100%;
+  font-size : 1.5rem;
+  text-align: center;
+  line-height: 100%;
+}
+
+.moneyBgContainer{
+  width:100%;
+  height:100%;
+  position: fixed;
+  top : 0;
+  left:0;
+  right:0;
+  background: rgba(0,0,0,0.3);
+  z-index:999;
+  display : none;
+}
+
+.moneyContainer {
+  height : 35rem;
+  width : 55rem;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  z-index: 1000;
+  background-color: rgb(253, 249, 237);
+  display : none;
+}
+
+.moneyHeader {
+  height : 5rem;
+  display : flex;
+  justify-content: space-around;
+}
+
+.moneyCount {
+  width : 40rem;
+  line-height: 5rem;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.moneyBtnContent {
+  text-align: right;
+}
+
+.okBtn,
+.cancleBtn {
+  height : 3rem;
+  width : auto;
+  margin:1rem;
+}
+
+.goodsModalContainer {
+  height : 35rem;
+  width : 35rem;
+  border-radius: 50%;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.3);
+  display : none;
+}
+
+.modalGoodsContent {
+  display : block;
+}
+
+.modalGoodsContent > img {
+  height : 30rem;
+  width : 30rem;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  display : none;
+}
+
+.paperContainer {
+  margin : 1rem;
+  /* margin-top: 7rem; */
+}
+
+.paperContent {
+  width : fit-content;
+  display : flex;
+  margin-bottom: 1rem;
+}
+
+.paperContent > img {
+  width : 12rem;
+  height : auto;
+  margin-left : 1rem;
+  border:solid rgb(184, 184, 184) 1px;
+}
+
+.paperContent > img:first-of-type {
+  margin-left : 0px;
+}
+
+.coinContainer {
+  margin : 1rem;
+  display : flex;
+}
+
+.coinContent {
+  width : fit-content;
+  display : flex;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+}
+
+.coinContent > img {
+  width : 5rem;
+  height : auto;
+  margin-left : 1rem;
+  border-radius: 50%;
+  border:solid rgb(184, 184, 184) 1px;
+}
+
+.coinContent > img:first-of-type {
+  margin-left : 0px;
+}
