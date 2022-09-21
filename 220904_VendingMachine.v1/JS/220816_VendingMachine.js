@@ -1,4 +1,4 @@
-window.onload=function() { 
+window.onload=function() {        // 버전마다 다르니까 써주는 게 좋음 (재가동 느낌)
   document.querySelector('.amountPaperBtn').addEventListener('click', doClickPaperBtn);
   document.querySelector('.amountCoinBtn').addEventListener('click', doClickCoinBtn);
   document.querySelector('.returnBtn').addEventListener('click', doClickReturnBtn);
