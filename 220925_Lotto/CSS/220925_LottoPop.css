@@ -1,0 +1,129 @@
+body {
+  margin : 0px;
+}
+
+.LottoContainer {
+  width : 100%;
+  background-color : rgba(219, 236, 255, 0.863);
+}
+
+.PageHeader {
+  height : 2.8rem;
+  color : white;
+  font-size : 1.3rem;
+  font-weight: 700;
+  text-align: center;             /* div내 text의 가로정렬 */
+  line-height: 2.8rem;            /* div내 text의 세로정렬 */
+  background-color : rgba(0, 119, 255, 0.863);
+}
+
+.LastWeekContainer {
+  margin : 0.7rem 0;  
+}
+
+.LastWeekHeader {
+  font-size : 1rem;
+  font-weight: 600;
+  text-align: center;             /* div내 text의 가로정렬 */
+  color : black;
+}
+
+.LastWeekContent {
+  font-size : 0.7rem;
+  font-weight: 600;
+  text-align: center;             /* div내 text의 가로정렬 */
+  color : rgb(141, 141, 141);
+}
+
+.LottoTitle {
+  margin-top : 1rem;
+  font-size : 0.85rem;
+  font-weight: 600;
+  text-align: center;             /* div내 text의 가로정렬 */
+  color : rgb(24, 24, 24);
+}
+
+.ThisWeekBallContainer {
+  height : 3rem;
+  width : 18rem;
+  justify-content: space-around;  /* div내 item의 가로정렬 */
+  align-items: center;            /* div내 item의 세로정렬 */
+  padding : 0.5rem 2rem;
+  margin : auto;
+  display : flex;
+}
+
+.ThisWeekBall,
+.BuyingBall {
+  height : 2.5rem;
+  width : 2.5rem;
+  border-radius: 50%;
+  background-color: aqua;
+  text-align: center;             /* div내 text의 가로정렬 */
+  line-height: 2.3rem;            /* div내 text의 세로정렬 */
+  font-size: 1.1rem;
+  font-weight: 900;
+  color : white;
+  text-shadow: 0px 0px 3px rgb(0 49 70 / 80%);
+}
+
+.RewardContainer {
+  margin : 1rem 1rem;
+  padding : 1rem 0;
+  background-color : white;
+}
+
+.RewardHeader {
+  font-size : 0.85rem;
+  font-weight: 700;
+  text-align: center;             /* div내 text의 가로정렬 */
+  color : rgb(141, 141, 141);
+}
+
+.RewardContent {
+  margin-top : 0.3rem;
+  font-size : 1rem;
+  font-weight: 900;
+  text-align: center;             /* div내 text의 가로정렬 */
+  color : black;
+}
+
+.RewardMoney {
+  color : blue;
+}
+
+.BuyingBallContainer {
+  padding : 1rem 1rem;
+  background-color: white;
+}
+
+table {
+  width : 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+th, td {
+  height : 2.7rem;
+  border: 0.1rem solid rgb(141, 141, 141);
+  font-size : 1rem;
+  font-weight: 900;
+}
+
+.BBHidden {
+  display : none;
+  visibility : collapse;
+}
+
+.BBBalls {
+  justify-content: space-around;  /* div내 item의 가로정렬 */
+  align-items: center;            /* div내 item의 세로정렬 */
+  display : flex;
+}
+
+.BuyingBall {
+  height : 2rem;
+  width : 2rem;
+  line-height: 2rem;            /* div내 text의 세로정렬 */
+  font-size: 0.8rem;
+}

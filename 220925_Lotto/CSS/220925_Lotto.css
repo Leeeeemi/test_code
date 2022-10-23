@@ -1,0 +1,72 @@
+
+.LottoContainer {
+  width : 30rem;
+  padding : 1rem;
+  border : 1px solid black;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+}
+
+.LottoHeader {
+  font-size : 1.5rem;
+  text-align: center;             /* div내 text의 가로정렬 */
+  font-weight : bold;
+  padding : 1rem 0;
+}
+
+.LottoBallContainer {
+  height : 3rem;
+  justify-content: space-around;  /* div내 item의 가로정렬 */
+  align-items: center;            /* div내 item의 세로정렬 */
+  padding : 1rem 2rem;
+  display : flex;
+}
+
+.LottoBall {
+  height : 3rem;
+  width : 3rem;
+  border-radius: 50%;
+  background-color: aqua;
+  text-align: center;             /* div내 text의 가로정렬 */
+  line-height: 2.8rem;            /* div내 text의 세로정렬 */
+  font-size: 1.3rem;
+  font-weight: 900;
+  color : white;
+  text-shadow: 0px 0px 3px rgb(0 49 70 / 80%);
+}
+
+.TimerContainer {
+  height : 2.5rem;
+  padding : 0.25rem 0;
+  display : flex;
+  align-items : center;
+}
+
+.TimerHeader {
+  width : 8.5rem;
+  font-size : 1rem;
+  padding-left : 1rem;
+}
+
+.TimerContent {
+  width : 20rem;
+  text-align : center;
+  font-size : 1.2rem;
+  font-weight : bold;
+}
+
+.LottoBuyBtnContiner {
+  justify-content: center;  /* div내 item의 가로정렬 */
+  display : flex;
+}
+
+.LottoBuyBtn {
+  width : 7rem;
+  margin : 0.8rem 0rem;
+  padding : 0.3rem 0;
+  border : 1px solid black;
+  text-align: center;
+  font-size : 1.2rem;
+}
